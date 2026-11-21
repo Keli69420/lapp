@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Yapp</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#E1E1E1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Yapp">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500&family=Unbounded:wght@200;300&display=swap">
+<style>
+html,body{margin:0;background:#E1E1E1;color:#141414;font-family:"Lexend",-apple-system,"Segoe UI",Roboto,sans-serif}
+[hidden]{display:none!important}
+#gate{min-height:100vh;min-height:100dvh;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box;text-align:center}
+#gate form{width:100%;max-width:320px;display:flex;flex-direction:column;gap:16px}
+#gate h1{margin:0 0 10px;font:200 46px/1.1 "Unbounded",-apple-system,sans-serif;letter-spacing:-.02em}
+#gate input{height:54px;border:0;border-radius:999px;background:#E1E1E1;box-shadow:inset 3px 3px 7px #BCBCBC,inset -3px -3px 7px #FFF;color:#141414;font-size:17px;text-align:center;padding:0 18px;-webkit-appearance:none;appearance:none;box-sizing:border-box;width:100%}
+#gate input:focus{outline:1.5px solid #141414;outline-offset:2px}
+#gate button{height:54px;border:0;border-radius:999px;background:#141414;color:#E1E1E1;font:500 16px "Lexend",-apple-system,sans-serif;cursor:pointer}
+#gate button[disabled]{opacity:.5}
+#msg{min-height:20px;font-size:14px;line-height:1.4;color:#8F1D10;margin:0}
+</style>
+</head>
+<body>
+<main id="gate" hidden>
+  <form id="f" autocomplete="on">
+    <h1>Yapp</h1>
+    <input id="pw" type="password" name="password" autocomplete="current-password" placeholder="Password" aria-label="Password" required>
+    <button id="go" type="submit">Unlock</button>
+    <p id="msg" role="status"></p>
+  </form>
+</main>
+<script src="boot.js"></script>
+</body>
+</html>
